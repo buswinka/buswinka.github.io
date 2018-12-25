@@ -1,7 +1,5 @@
-### Christopher Buswinka
-
 ## About
-I am currently a PhD student in the Speech and Hearing Bioscience and Technology graduate program at Harvard University. 
+My name is Chris Buswinka, I am currently a PhD student in the Speech and Hearing Bioscience and Technology graduate program at Harvard University. 
 
 
 ## Publciations
