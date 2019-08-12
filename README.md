@@ -2,7 +2,7 @@
 My name is Chris Buswinka, I am currently a PhD student in the Speech and Hearing Bioscience and Technology graduate program at Harvard University. 
 
 
-## Publciations
+## Publications
 
 Buswinka CJ, Colesa DJ, Zhao C, Raphael Y, Grosh K, Pfingst BE (2017) **Modeled Impedance and Tissue Growth in the Implanted Cochlea.** Conference on Implantable Auditory Prostheses Program Book, Page 87, Poster M08b.
 
