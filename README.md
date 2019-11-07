@@ -27,5 +27,5 @@ University of Michigan 2014 - 2018
 
 ## Dumb Ideas
 
-# Adaptation and Creep in Hair Cells
+### Adaptation and Creep in Hair Cells
 From physics, the tensile strength of materials depend on the rate of force application. You can intuitivly think about this if you try to 'snap' a paper from both ends. It doesnt break! Now think about force probes. Their onsets are often given as an impulse, then sustained. Imagine now, that top connectors act similarly to the paper before. With an initial instant force, they resist movement, limiting deflection, however as force is sustained they relax and can continue to allow the hair bundle to deflect. 
