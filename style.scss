@@ -1,0 +1,195 @@
+:root {
+    --yellow: #EE9B00;
+    --alloy-orange: #CA6702;
+    --dark-orange: #BB3E03;
+    --red: #AE2012;
+    --dark-red: #9B2226;
+    --pale: #E9D8A6;
+    --light-blue-green: #94D2BD;
+    --blue-green: #0A9396;
+    --blue: #005F73;
+    --black: #001219;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    gap: 1rem;
+    height: 1fr;
+
+    grid-template-areas:
+        "topbar"
+        "content"
+        "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem auto 1rem;
+    //gap: 1rem 1rem;
+}
+
+/*Topbar Shit*/
+
+.topbar {
+    grid-area: topbar;
+    display: flex;
+    position:sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    padding: 0 10px;
+    border-bottom: 10px;
+    border-bottom-color: var(--dark-orange);
+}
+.topbar li, a {
+    color: var(--pale);
+    text-decoration: none;
+    font-family: Poppins, Helvetica;
+    font-weight: 300;
+}
+.namelogo {
+    display: flex;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    justify-content: space-between;
+}
+.namelogo img{
+    height: 1rem;
+}
+.links {
+    list-style: none;
+
+}
+.links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/*Body Shit*/
+@media screen and (min-width: 700px) {
+    .card {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: "title img";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 1fr;
+        justify-content: center;
+        padding: 5% 5% 5% 5%;
+        background: white;
+
+        color: var(--black);
+        font-family: Poppins, Helvetica;
+        font-weight: 300;
+
+    }
+}
+
+.card div div h1 {
+    font-weight: 500;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.image_container_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-color: var(--yellow);
+    padding-left: 1rem;
+    border-left-style: solid;
+    border-left-width: 4px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.image_container_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-color: var(--yellow);
+    padding-right: 1rem;
+    border-right-style: solid;
+    border-right-width: 4px;
+    width: 100%;
+    height: 100%;
+}
+div div img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.title_text_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--black);
+    font-family: Poppins, Helvetica;
+    padding-bottom: 2rem;
+    padding-right: clamp(1rem, 20%, 20rem);
+}
+
+.title_text_right {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 5rem;
+    overflow: no-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    padding-right: 4rem;
+}
+
+.content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 3fr 1fr;
+}
+
+
+
+/*Footer Shit*/
+
+.footer {
+    grid-area: footer;
+}
+
+.headerlogo {
+    height: 2rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.sidebar-left {
+    grid-area: left;
+}
+
+.sidebar-right{
+    grid-area: right;
+
+}
+
