@@ -21,17 +21,19 @@ html {
 
 body {
     display: grid;
-    gap: 1rem;
-    height: 1fr;
+    //height: 1fr;
 
     grid-template-areas:
         "topbar"
-        "content"
+        "full_page_intro"
+        "card1"
+        "card2"
+        "statement"
+        "transition"
         "footer";
 
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem auto 1rem;
-    //gap: 1rem 1rem;
+    grid-template-rows: 3rem 100vh auto auto auto auto 10rem;
 }
 
 /*Topbar Shit*/
@@ -71,6 +73,32 @@ body {
     display: inline-block;
     padding: 0 20px;
 }
+
+#full_page_intro {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height:100%;
+    background-image: url("background design.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#full_page_intro h1 {
+    justify-self: center;
+    font-family: Gelasio;
+    text-align: center;
+    align-self: center;
+    font-weight: 500;
+    color: var(--alloy-orange);
+    margin: 0 22%;
+    font-size: 5rem;
+
+}
+
 
 /*Body Shit*/
 @media screen and (min-width: 700px) {
@@ -151,15 +179,26 @@ div div img {
 
 .title_text_right {
     display: flex;
-    padding-left: 1rem;
-    padding-right: 5rem;
+    margin-left: auto;
     overflow: no-content;
     flex-direction: column;
-    justify-content: center;
+    //text-align: right;
+    justify-content: end;
+    margin-left: auto;
     align-items: center;
     font-size: 3rem;
     padding-bottom: 2rem;
-    padding-right: 4rem;
+    padding-left: clamp(1rem, 20%, 20rem);
+
+    font-family: Poppins, Helvetica;
+}
+
+.descriptor_text_right {
+    padding-left: clamp(1rem, 20%, 20rem);
+}
+
+.descriptor_text_left {
+    padding-right: clamp(1rem, 20%, 20rem);
 }
 
 .content {
@@ -170,13 +209,36 @@ div div img {
     margin: 3fr 1fr;
 }
 
+#card1 { grid-area: card1;}
+#card2 { grid-area: card2;}
+
+
+.statement_box {
+    grid-area: statement;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin: 6% 15% 25% 15%;
+    height: 35%;
+    width: auto;
+    background-color: var(--dark-orange);
+    color: var(--pale);
+
+}
+
+.statement_box h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 40%;
+    align-self: center;
+    font-style: italic;
+    font-weight: 200;
+
+}
 
 
 /*Footer Shit*/
-
-.footer {
-    grid-area: footer;
-}
 
 .headerlogo {
     height: 2rem;
@@ -184,12 +246,37 @@ div div img {
     cursor: pointer;
 }
 
-.sidebar-left {
-    grid-area: left;
+.transition{
+  grid-area: transition;
+    width: 100%;
+  height: auto;
 }
 
-.sidebar-right{
-    grid-area: right;
+.footer {
+    display: flex;
+    grid-area:footer;
+    color: var(--pale);
+    font-size: 1rem;
+    height: 100%;
+    //justify-content: center;
+    //align-content: space-between;
+    background-color: var(--black);
 
 }
+
+.footer ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  height: auto;
+
+}
+.footer img {
+  margin-right: 3rem;
+    height: 100%;
+    width: auto;
+}
+
+
 

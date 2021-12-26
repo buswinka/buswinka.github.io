@@ -7,28 +7,45 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
     </style>
 </head>
 
 <body>
 
-    <main class="content" id="top">
-        <div class="card">
-            <div>
-                <h1 class="title_text_left">Never Click On A Cell Again</h1>
-                <p>
-                    You can visualise thousands of cells in a single microscopy image stack.
-                    Can your analysis method keep up in the face of big data?
-                </p>
-            </div>
-            <div class="image_container_right"><img src="HEK_invert.jpg" alt="hek cells"></div>
+    <div id="full_page_intro">
+        <h1>Deep Learning Powered Biological Data Analysis</h1>
+    </div>
+
+    <div class="card", id="card1">
+        <div>
+            <h1 class="title_text_left">Never Click On A Cell Again</h1>
+            <p class="descriptor_text_left">
+                You can visualise thousands of cells in a single microscopy image stack.
+                Can your analysis method keep up in the face of big data?
+            </p>
         </div>
-        <div class="card">
-            <div class="image_container_left"><img src="overlay.jpg" alt="hek cells"></div>
-            <h1 class="title_text_right">Let your computer do the work</h1>
+        <div class="image_container_right"><img src="HEK_invert.jpg" alt="hek cells"></div>
+    </div>
+
+    <div class="card", id="card2">
+        <div class="image_container_left"><img src="overlay.jpg" alt="hek cells"></div>
+        <div>
+            <h1 class="title_text_right">Let Your Computer Do The Work</h1>
+            <p class="descriptor_text_right">
+                Deep learning enabled tools can exponentially increase the throughput of
+                your data analysis.
+            </p>
         </div>
-    </main>
+    </div>
+
+    <div class="statement_box">
+        <h1>
+            You know your data better than anyone. Don't be pigeonholed into a
+            one size fits all analysis solution.
+        </h1>
+    </div>
 
     <header class="topbar">
         <a href=#top class="headerlogo">
@@ -50,8 +67,15 @@
         </ul>
     </header>
 
-    
+    <img src="bottom%20svg.svg" alt="Transition Image" class="transition">
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <img src="Fulllogo.svg" alt="Full Logo of Company">
+        <ul>
+            <li>Buswinka Consulting Group LLC</li>
+            <li>buswinka@gmail.com</li>
+            <li>2318877090</li>
+        </ul>
+    </footer>
 </body>
 </html>
