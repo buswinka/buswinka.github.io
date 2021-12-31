@@ -2,80 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Oh snap thats whats up">
-    <title>Learning As I Go</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <meta name="Buswinka Consulting Group LLC is a leading biological data solutions firm located in Boston Massachusetts.">
+    <title>Buswinka</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
     </style>
+
 </head>
 
 <body>
-
-    <div id="full_page_intro">
-        <h1>Deep Learning Powered Biological Data Analysis</h1>
-    </div>
-
-    <div class="card", id="card1">
-        <div>
-            <h1 class="title_text_left">Never Click On A Cell Again</h1>
-            <p class="descriptor_text_left">
-                You can visualise thousands of cells in a single microscopy image stack.
-                Can your analysis method keep up in the face of big data?
-            </p>
-        </div>
-        <div class="image_container_right"><img src="HEK_invert.jpg" alt="hek cells"></div>
-    </div>
-
-    <div class="card", id="card2">
-        <div class="image_container_left"><img src="overlay.jpg" alt="hek cells"></div>
-        <div>
-            <h1 class="title_text_right">Let Your Computer Do The Work</h1>
-            <p class="descriptor_text_right">
-                Deep learning enabled tools can exponentially increase the throughput of
-                your data analysis.
-            </p>
-        </div>
-    </div>
-
-    <div class="statement_box">
-        <h1>
-            You know your data better than anyone. Don't be pigeonholed into a
-            one size fits all analysis solution.
-        </h1>
-    </div>
-
-    <header class="topbar">
-        <a href=#top class="headerlogo">
-            <img src="./logo_a.svg" alt="Logo" class="headerlogo">
+    <header id="header">
+        <a href="#header">
+            <img src="./images/logo_a.svg" alt="Simple Company Logo">
         </a>
-        <a href=#yeet class="namelogo">
-            <img src="./name.svg" alt="Logo" >
+        <a href="#header">
+            <img src="./images/name.svg" alt="Simple Company Logo" id="name_logo">
         </a>
-        <ul class="links">
-            <li>
-                <a href="#yeet">About Us</a>
-            </li>
-            <li>
-                <a href="#Expertise">Expertise</a>
-            </li>
-            <li>
-                <a href="#Contact">Contact</a>
-            </li>
+        <ul>
+            <li><a href="#about_us">About us</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#footer_container">Contact</a></li>
         </ul>
     </header>
 
-    <img src="bottom%20svg.svg" alt="Transition Image" class="transition">
+    <div class="splash_screen">
+        <h1>
+            AI Powered Biological Data Analysis
+        </h1>
+    </div>
 
-    <footer class="footer">
-        <img src="Fulllogo.svg" alt="Full Logo of Company">
-        <ul>
-            <li>Buswinka Consulting Group LLC</li>
-            <li>buswinka@gmail.com</li>
-            <li>2318877090</li>
-        </ul>
-    </footer>
+    <div class="card">
+        <div class="text_container">
+            <h1>Never Click On A Cell Again</h1>
+            <p>You can visualise thousands of cells in a single microscopy image stack.
+            Can your analysis method keep up in the face of big data?</p>
+        </div>
+        <div class="divider"></div>
+        <img src="./images/hek.svg" alt="Hek Cells">
+    </div>
+
+    <div class="card">
+        <div class="text_container">
+            <h1>Let Your Computer Do The Work</h1>
+            <p>Deep learning enabled tools can exponentially
+                increase the throughput of your data analysis. </p>
+        </div>
+        <div class="divider"></div>
+        <img src="./images/hek_mask.svg" alt="Hek Cells">
+    </div>
+
+    <div class="card" id="about_us">
+        <div class="text_container">
+            <h1>
+                We Are Biologists First <br>
+                <span>Deep Learning Experts Second.</span>
+            </h1>
+            <p>We are PhD trained sensory neruoscientists and biologists turned deep learning experts building custom algorithmic data analysis piplines for your companies advanced research. We speak your language
+                - describe your experiment as if to a peer and we’ll handle the rest. </p>
+        </div>
+        <div class="divider"></div>
+        <img src="./images/neuron2.svg" alt="">
+    </div>
+
+    <div class="statement_box" id="expertise">
+        <h1>
+            Our Expertise
+        </h1>
+        <p>
+            Our expertise in a wide modality of technologies help companies accelerate their
+            research piplines, bringing cutting edge results to market faster.
+        </p>
+    </div>
+
+    <div class="technologies">
+        <div class="tech_card">
+            <img src="./images/abr.svg" alt="ABR graphic" id="abr">
+            <h1 id="title_a">Signal Processing</h1>
+            <p id="p_a">
+                Leverage descriptive signal analysis models to process your time series data
+                and achieve expert level accuracy at superhuman speeds.
+            </p>
+        </div>
+
+        <div class="tech_card">
+            <img src="./images/conv.svg" alt="convolutions" id="conv">
+            <h1 id="title_c">Computer Vision</h1>
+            <p id="p_c">
+                Extract fluorescence information, count cells, or track morphology from your microscopy
+                images with state of the art deep learning models.
+            </p>
+        </div>
+        <div class="tech_card">
+            <img src="./images/prob.svg" alt="Probabilities" id="prob">
+            <h1 id="title_p">Probability Modeling</h1>
+            <p id="p_p">
+                Reveal hidden patterns in your data and remove bias hidden by hierarchical structures
+                with probabilistic modeling and millions of samples.
+            </p>
+        </div>
+    </div>
+
+    <div id="footer_container">
+        <footer class="footer">
+            <img src="./images/Fulllogo.svg" alt="Full Logo of Company">
+            <ul>
+                <li>Buswinka Consulting Group LLC</li>
+                <li>buswinka@gmail.com</li>
+                <li>2318877090</li>
+            </ul>
+        </footer>
+        <form
+                id="my-form"
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbwxIlugVjKHbEyPE7nr4KsoVBnTcZQW58TA55DINesKttzhm5eB65NtT7aO-EF8GwOA6g/exec"
+        >
+            <input name="Firstname" type="firstname" placeholder="FIRST NAME" id="firstname" required>
+            <input name="Lastname" type="lastname" placeholder="LAST NAME" id="lastname" required>
+            <input name="Email" type="email" placeholder="EMAIL" id="email" required>
+            <textarea name="Message" type="message" id="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
 </body>
+<script defer>
+    window.addEventListener("load", function() {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    form.innerHTML = '<h1>Success!</h1>'
+                })
+        });
+    });
+
+</script>
 </html>
