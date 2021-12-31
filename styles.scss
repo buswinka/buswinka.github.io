@@ -1,4 +1,5 @@
 :root {
+
   --yellow: #EE9B00;
   --alloy-orange: #CA6702;
   --dark-orange: #BB3E03;
@@ -9,6 +10,12 @@
   --blue-green: #0A9396;
   --blue: #005F73;
   --black: #001219;
+
+  --serif: Cormorant Garamond;
+  --sans-serif: Alegreya Sans;
+  --title-font-weight: 700;
+  --p-font-weight: 500;
+  --title-size: 3rem;
 }
 * {
   margin: 0;
@@ -21,12 +28,13 @@
 html {
   scroll-behavior: smooth;
   scroll-margin-top: 8rem;
+  background-color: lightgrey;
 }
 
 h1, h1 span{
-  font-family: Gelasio;
-  font-weight: 300;
-  font-size: 2rem;
+  font-family: var(--serif);
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-size);
   color: var(--black);
 }
 
@@ -37,8 +45,8 @@ h1, h1 span{
 }
 
 p {
-  font-family: Poppins;
-  font-weight: 300;
+  font-family: var(--sans-serif);
+  font-weight: var(--p-font-weight);
   color: var(--black);
 }
 
@@ -84,19 +92,26 @@ header ul li {
 header ul li a {
   color: var(--pale);
   text-decoration: none;
-  font-family: Poppins, sans-serif;
-  font-weight: 300;
+  font-family: var(--sans-serif), sans-serif;
+  font-weight: var(--p-font-weight);
 }
 
 //----------------------- Splash Screen ---------------------------//
 
 .splash_screen {
-  display: flex;
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, 500px);
+  //grid-template-rows: repeat(auto-fit, 500px);
+  gap: 1rem;
+  //padding: 5rem 0;
+
+
   justify-content: center;
-  align-items: center;
+  align-content: center;
   grid-area: splash_screen;
   background-color: var(--black);
-  height: 100vh;
   background-image: url("./images/background design.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -105,21 +120,58 @@ header ul li a {
   //z-index: 3;
 }
 
-.splash_screen h1 {
-  font-size: clamp(3rem, 5rem, 20rem);
-  width: 100%;
-  margin: auto 2rem;
-  color: var(--alloy-orange);
-  text-align: center;
+.splash_screen_card h1 {
+  color: var(--pale);
+  font-size: clamp(2rem, 3rem, 20rem);
+  font-weight: 500;
+  font-size: 3rem;
+  //justify-self: center;
+  //align-self: center;
+  padding: 0 3rem;
+  //text-align: center;
   text-shadow: 2px 2px 2px #000405;
 }
+
+.splash_screen_card p {
+  color: var(--pale);
+  font-family: var(--sans-serif);
+  font-weight: 300;
+  font-size: 1.5rem;
+  //justify-self: center;
+  //align-self: center;
+  padding: 1rem 3rem;
+  color: var(--pale);
+  //text-align: center;
+  text-shadow: 2px 2px 2px #000405;
+  mmargin: 3rem;
+}
+
+.splash_screen video {
+  width: 100%;
+  //padding: 1rem;
+  margin: auto;
+  border: 1px solid var(--pale);
+  border-radius: 6px;
+  box-shadow: 3px 3px 15px 1px rgba(233,216,166, 0.09);
+}
+
+.splash_screen_divider{
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: var(--yellow);
+  width: 80%;
+  height: 2px;
+  margin: 1rem 3rem;
+  align-self: center;
+}
+
 
 //-------------------- Divider ----------------------//
 
 .divider {
   flex-shrink: 0;
   flex-grow: 0;
-  background-color: var(--dark-red);
+  background-color: var(--black);
   width: 100%;
   height: 2px;
   margin: 10px 0;
@@ -146,10 +198,11 @@ header ul li a {
 
 .text_container h1 {
   margin-right: 20%;
+  margin-bottom: 2%;
 }
 
 .text_container h1 span {
-  color: var(--blue);
+  color: var(--yellow);
 }
 
 //-------------------- Card -------------------------//
@@ -161,7 +214,6 @@ header ul li a {
   flex-flow: column;
   justify-content: center;
   margin: 2rem auto;
-  padding: 0 1rem;
   width: 80vw;
   background: white;
   padding: 2rem;
@@ -185,10 +237,13 @@ header ul li a {
 .card img {
   width: 25rem;
   margin: auto;
+
   }
 
 // ----------------- About us -------------------//
 #about_us{scroll-margin-top: 5rem;}
+
+
 
 // ----------------- Statement Box ---------------//
 
@@ -199,21 +254,23 @@ header ul li a {
   flex-flow: column;
   justify-content: center;
   align-content: center;
-  font-family: Gelasio, Helvetica;
+  font-family: var(--serif), Helvetica;
 
-  margin: 15% 0% 5% 0%;
-  padding: 2rem 0 2rem 0;
+  margin: 5% 0% 5% 0%;
+  padding: 6rem 0 6rem 0;
   height: 35%;
   background-color: var(--black);
-  color: var(--pale);
+  color: var(--black);
   z-index: 9;
-  scroll-margin-top: 3rem;
+  scroll-margin-top: 2.8rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 -4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .statement_box h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   width: 40%;
+  font-weight: var(--title-font-weight);
   align-self: center;
   color: var(--pale);
 
@@ -222,8 +279,8 @@ header ul li a {
 .statement_box p {
   text-align: center;
   margin: 2% 25% 0 25%;
-  font-family: Poppins, Helvetica;
-  font-weight: 300;
+  font-family: var(--sans-serif), Helvetica;
+  font-weight: var(--p-font-weight);
   font-size: 1rem;
   color: var(--pale);
 
@@ -236,6 +293,10 @@ header ul li a {
   display: flex;
   flex-flow: column;
   padding: 2rem 0;
+
+  background-color: white;
+  margin: 0 5% 5% 5%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .technologies {
@@ -248,10 +309,10 @@ header ul li a {
 
 
 .technologies p {
-  font-family: Poppins, Arial;
+  font-family: var(--sans-serif), Arial;
   font-size: 1rem;
   color: var(--black);
-  font-weight: 300;
+  font-weight: var(--p-font-weight);
   margin: max(1rem, 1.5%) 5% 0 5%;
   text-align: center;
 }
@@ -262,11 +323,11 @@ header ul li a {
 }
 
 .technologies h1 {
-  font-family: Poppins, Arial;
+  font-family: var(--sans-serif), Arial;
   text-align: center;
   font-size: 1.5rem;
   color: var(--black);
-  font-weight: 500;
+  font-weight: var(--title-font-weight);;
   margin-top: max(1rem, 1.5%);
 }
 
@@ -334,7 +395,7 @@ form {
   grid-gap: 20px;
 
   color: #E9D8A6;
-  font-family: Poppins;
+  font-family: var(--sans-serif);
   //margin: 15% 0 15% 0 ;
 }
 
